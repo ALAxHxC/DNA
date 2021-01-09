@@ -15,11 +15,10 @@ class mockModel {
     return new Promise((resolve) => {
       return resolve([
         {
-          _id: {
-            totalHumans: 10,
-            totalMutant: 1,
-            count: 1,
-          },
+          _id: null,
+          totalHumans: 10,
+          totalMutant: 1,
+          count: 1,
         },
       ]);
     });

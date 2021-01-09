@@ -30,7 +30,7 @@
 ## Entorno
 
   * URL_LOCAL: localhost:3000
-  * URL_NUBE: https://dna-m.herokuapp.com/mutant (Esperar 30 Segundos la primera vez) 
+  * URL_NUBE: https://dna-m.herokuapp.com (Esperar 30 Segundos la primera vez) 
 
 ## Archivo .env
 

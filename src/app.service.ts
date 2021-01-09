@@ -16,18 +16,17 @@ export class AppService {
     const response = await this.adnModel.aggregate([
       {
         $group: {
-          _id: {
-            totalHumans: { $sum: '$isHuman' },
-            totalMutant: { $sum: '$isMutant' },
-            count: { $sum: 1 },
-          },
+          _id: null,
+          totalHumans: { $sum: '$isHuman' },
+          totalMutant: { $sum: '$isMutant' },
+          count: { $sum: 1 },
         },
       },
     ]);
     return {
-      ratio: response[0]._id.totalMutant / response[0]._id.totalHumans,
-      count_mutant_dna: response[0]._id.totalMutant,
-      count_human_dna: response[0]._id.totalHumans,
+      ratio: response[0].totalMutant / response[0].totalHumans,
+      count_mutant_dna: response[0].totalMutant,
+      count_human_dna: response[0].totalHumans,
     };
   }
 
