@@ -26,6 +26,43 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
+## Entorno
+
+  * URL_LOCAL: localhost:3000
+  * URL_NUBE: https://dna-m.herokuapp.com/mutant (Esperar 30 Segundos la primera vez) 
+
+## Archivo .env
+
+  *  URL_MONGO : URL de conexion a mongo DB
+
+## Endpoints:
+
+ * mutant:
+    * POST: /mutant
+    * Request:
+      ``` 
+          {
+          "dna": [
+              "ATGCGA",
+              "CAGTGC",
+              "TTATGT",
+              "AGAAGG",
+              "CCCCTA",
+              "TCACTG"
+          ]
+        }
+      ```
+    * GET: /stats
+    * Response:
+    ```
+    {
+      "ratio": null,
+      "count_mutant_dna": 1,
+      "count_human_dna": 0
+    }
+    ```
+
 ## Installation
 
 ```bash
